@@ -22,5 +22,12 @@ public class UserDaoImpl implements UserDao{
         List<User> users = jtm.query(sql, new UserMapper());
         return users;
     }
+
+    @Override
+    public List<User> getById(int id) {
+        String sql = "SELECT * from users where id = ?";
+        List<User> user = jtm.query(sql, new UserMapper(), id);
+        return user;
+    }
     
 }

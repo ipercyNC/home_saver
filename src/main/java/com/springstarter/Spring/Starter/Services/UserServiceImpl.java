@@ -18,5 +18,11 @@ public class UserServiceImpl implements UserService {
         List<User> users = userDao.getAllUsers();
         return users;
     }
+
+    @Override
+    public User getById(int id) {
+        User user = userDao.getById(id).get(0);
+        return user;
+    }
     
 }

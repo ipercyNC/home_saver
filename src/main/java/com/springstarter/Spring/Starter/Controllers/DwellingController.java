@@ -15,8 +15,8 @@ public class DwellingController {
     private DwellingService dwellingService;
 
     @GetMapping(value="/dwelling")
-    public List<Dwelling> getDwelling() {
-        List<Dwelling> dwellings = dwellingService.findAll();
+    public List<Dwelling> getAllDwellings() {
+        List<Dwelling> dwellings = dwellingService.getAllDwellings();
         return dwellings;
     }
 }

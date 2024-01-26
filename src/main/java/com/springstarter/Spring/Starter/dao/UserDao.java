@@ -5,4 +5,5 @@ import com.springstarter.Spring.Starter.Models.User;
 
 public interface UserDao {
     List<User> getAllUsers();
+    List<User> getById(int id);
 }

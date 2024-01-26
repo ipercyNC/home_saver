@@ -1,19 +1,27 @@
 package com.springstarter.Spring.Starter.Services;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.springstarter.Spring.Starter.Models.Dwelling;
+import com.springstarter.Spring.Starter.dao.DwellingDao;
 
 @Service
 public class DwellingSerivceImpl implements DwellingService{
+    @Autowired
+    DwellingDao dwellingDao;
+
+    @Autowired
+    private UserService userService;
 
     @Override
-    public List<Dwelling> findAll() {
-        ArrayList<Dwelling> dwellings = new ArrayList<Dwelling>();
-        dwellings.add(new Dwelling(200, "", "123 Road NC", 1));
+    public List<Dwelling> getAllDwellings() {
+        List<Dwelling> dwellings = dwellingDao.getAllDwellings();
+        for (Dwelling d: dwellings) {
+            d.setUser(userService.getById(d.getUserId()));
+        }
         return dwellings;
     }
     

@@ -1,11 +1,11 @@
-package com.springstarter.Spring.Starter.dao;
+package com.homesaver.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.springstarter.Spring.Starter.Models.User;
+import com.homesaver.Models.User;
 
 public class UserMapper implements RowMapper<User>{
     public User mapRow(ResultSet rs, int rowNum) throws SQLException {

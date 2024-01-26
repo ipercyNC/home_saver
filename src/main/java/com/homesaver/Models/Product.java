@@ -1,4 +1,4 @@
-package com.springstarter.Spring.Starter.Models;
+package com.homesaver.Models;
 
 public class Product {
     private int id;

@@ -1,12 +1,12 @@
-package com.springstarter.Spring.Starter.Services;
+package com.homesaver.Services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.springstarter.Spring.Starter.Models.Product;
-import com.springstarter.Spring.Starter.dao.ProductDao;
+import com.homesaver.Models.Product;
+import com.homesaver.dao.ProductDao;
 
 @Service
 public class ProductServiceImpl implements ProductService{
@@ -18,4 +18,11 @@ public class ProductServiceImpl implements ProductService{
         List<Product> products = productDao.getAllProducts();
         return products;
     }
+
+    @Override
+    public List<Product> getProductsByDwelling(int id) {
+        List<Product> products = productDao.getProductsByDwelling(id);
+        return products;
+    }
+    
 }

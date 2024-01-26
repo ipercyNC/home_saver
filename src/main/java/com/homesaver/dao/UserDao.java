@@ -1,7 +1,8 @@
-package com.springstarter.Spring.Starter.dao;
+package com.homesaver.dao;
 
 import java.util.List;
-import com.springstarter.Spring.Starter.Models.User;
+
+import com.homesaver.Models.User;
 
 public interface UserDao {
     List<User> getAllUsers();

@@ -1,11 +1,11 @@
-package com.springstarter.Spring.Starter.dao;
+package com.homesaver.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.springstarter.Spring.Starter.Models.Dwelling;
+import com.homesaver.Models.Dwelling;
 
 public class DwellingMapper implements RowMapper<Dwelling> {
 

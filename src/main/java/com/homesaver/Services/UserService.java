@@ -1,8 +1,8 @@
-package com.springstarter.Spring.Starter.Services;
+package com.homesaver.Services;
 
 import java.util.List;
 
-import com.springstarter.Spring.Starter.Models.User;
+import com.homesaver.Models.User;
 
 public interface UserService {
     List<User> getAllUsers();

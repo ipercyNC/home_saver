@@ -1,11 +1,11 @@
-package com.springstarter.Spring.Starter.dao;
+package com.homesaver.dao;
 
 import java.util.List;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.springstarter.Spring.Starter.Models.Dwelling;
+import com.homesaver.Models.Dwelling;
 
 @Repository
 public class DwellingDaoImpl implements DwellingDao {
@@ -21,4 +21,5 @@ public class DwellingDaoImpl implements DwellingDao {
         List<Dwelling> dwellings = jtm.query(sql, new DwellingMapper());
         return dwellings;
     }
+
 }

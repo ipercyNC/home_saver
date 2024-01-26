@@ -1,4 +1,6 @@
-package com.springstarter.Spring.Starter.Models;
+package com.homesaver.Models;
+
+import java.util.List;
 
 public class Dwelling {
     private int id;
@@ -6,15 +8,17 @@ public class Dwelling {
     private String address;
     private int userId;
     private User user;
+    private List<Product> products;
 
     public Dwelling(){}
-    public Dwelling(int id, String dwellingType, String address, int userId, User user){
+    public Dwelling(int id, String dwellingType, String address, int userId, User user, List<Product> products){
         super();
         this.id = id;
         this.dwellingType = dwellingType;
         this.address = address;
         this.userId = userId;
         this.user = user;
+        this.products = products;
     }
 
     public int getId() {
@@ -56,10 +60,19 @@ public class Dwelling {
     public void setUser(User user){
         this.user = user;
     }
+    
+    public List<Product> getProducts(){
+        return this.products;
+    }
+
+    public void setProducts(List<Product> products){
+        this.products = products;
+    }
+
     @Override
     public String toString() {
         return "Dwelling [id=" + id + ", dwellingType=" + dwellingType + ", address=" + 
-        address + ", userId=" + userId + ", user=" + user + "]";
+        address + ", userId=" + userId + ", user=" + user + ", products=" + products + "]";
     }
 }
 

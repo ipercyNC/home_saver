@@ -1,4 +1,4 @@
-package com.springstarter.Spring.Starter;
+package com.homesaver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.springstarter.Spring.Starter.Controllers;
+package com.homesaver.Controllers;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springstarter.Spring.Starter.Models.User;
-import com.springstarter.Spring.Starter.Services.UserService;
+import com.homesaver.Models.User;
+import com.homesaver.Services.UserService;
 
 @RestController
 public class UserController {

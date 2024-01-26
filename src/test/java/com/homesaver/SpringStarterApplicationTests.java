@@ -1,4 +1,4 @@
-package com.springstarter.Spring.Starter;
+package com.homesaver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -18,6 +18,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation group: 'org.springframework.security', name: 'spring-security-core', version: '6.2.1'
 	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

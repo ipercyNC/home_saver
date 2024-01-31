@@ -15,12 +15,12 @@ public class AuthServiceImpl implements AuthService {
     UserDao userDao;
 
     @Override
-    public Boolean login(String username, String password) {
+    public User login(String username, String password) {
     PasswordEncoder encoder = new BCryptPasswordEncoder(); 
         User user = userDao.getByUsername(username);
         if (encoder.matches(password, user.getPassword())) {
-            return true;
+            return user;
         }
-        return false;
+        return null;
     }
 }

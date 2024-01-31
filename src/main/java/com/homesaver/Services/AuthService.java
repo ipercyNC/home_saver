@@ -1,5 +1,7 @@
 package com.homesaver.Services;
 
+import com.homesaver.Models.User;
+
 public interface AuthService {
-    Boolean login(String username, String password);
+    User login(String username, String password);
 }
